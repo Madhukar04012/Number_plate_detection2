@@ -1,0 +1,38 @@
+# YOLOv8 Dataset Configuration for License Plate Detection
+# 
+# Usage: Update the 'path' to point to your dataset directory
+# Ensure your directory structure matches:
+#
+# dataset/
+#   ├── images/
+#   │    ├── train/  # Training images (.jpg, .png)
+#   │    └── val/    # Validation images (.jpg, .png)
+#   └── labels/
+#        ├── train/  # Training labels (.txt in YOLO format)
+#        └── val/    # Validation labels (.txt in YOLO format)
+#
+# YOLO Label Format (normalized 0-1):
+# class_id x_center y_center width height
+# Example: 0 0.512 0.645 0.156 0.089
+
+# Path to dataset root (absolute or relative to this file)
+path: ./dataset
+
+# Path to training images (relative to 'path')
+train: images/train
+
+# Path to validation images (relative to 'path')
+val: images/val
+
+# Optional: Test set (uncomment if you have test data)
+# test: images/test
+
+# Number of classes
+nc: 1
+
+# Class names
+names:
+  0: license_plate
+
+# Optional: Download function (if using remote dataset)
+# download: https://example.com/dataset.zip
