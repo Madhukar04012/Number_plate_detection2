@@ -1,25 +1,23 @@
 """
 main_v3.py
-Advanced License Plate Detection System with YOLOv8 AI + OCR
+Enhanced License Plate Detection System — YOLOv8 integration
 
-Features:
-- **YOLOv8 Detection** (primary) with Haar Cascade fallback for robust plate detection
-- Pre-trained YOLOv8n model for fast inference or YOLOv8m for better accuracy
-- All v2.0 features: OCR, webcam, batch processing, SQLite logging, watchlist
-- Enhanced preprocessing for better OCR accuracy
-- Model download and caching
-- Custom training guide included
+Notes:
+- This is based on the previous main_v2 implementation (OCR, webcam, batch, sqlite logging, watchlist).
+- Detection engine replaced with YOLOv8 (Ultralytics) for better accuracy and robustness.
+- You should train (or download) a YOLOv8 model for license plates and place it at models/plate_best.pt
+- If you haven't trained a model yet, the script will use pre-trained YOLOv8 (but plate detection may be less accurate)
+
+Requirements:
+ - ultralytics, torch (see requirements.txt)
+ - pytesseract/easyocr if you want OCR (same as v2)
 
 Run:
     python main_v3.py
 
-Requirements:
-    pip install ultralytics torch torchvision opencv-python pytesseract easyocr pillow
-
-Notes:
-    - First run will download YOLOv8 model (~6MB for nano, ~50MB for medium)
-    - For custom training on your region's plates, see train_yolo() function
-    - Falls back to Haar Cascade if YOLOv8 unavailable
+References:
+ - Ultralytics Documentation: https://docs.ultralytics.com/
+ - PyTorch Installation: https://pytorch.org/get-started/locally/
 """
 
 import os
