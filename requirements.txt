@@ -18,6 +18,9 @@ customtkinter>=5.0.0
 # Visualization
 matplotlib>=3.5.0
 
+# Voice Alerts (vFinal)
+pyttsx3>=2.90
+
 # Database
 # sqlite3 is included with Python standard library
 
